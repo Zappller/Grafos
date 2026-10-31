@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 ox.settings.log_console = False
 ox.settings.use_cache = True
 
-casa = (-10.9301, -37.0602)   # A
-ufs  = (-10.9280, -37.1005)   # B
+casa = (-10.968831195960583, -37.0856515783314)   # A
+ufs  = (-10.924758256888392, -37.10505198873507)   # B
 centro = ((casa[0] + ufs[0]) / 2, (casa[1] + ufs[1]) / 2)
 
 ARQUIVO = "aracaju.graphml"
@@ -57,6 +57,7 @@ folium.Marker(ufs,  tooltip="B - UFS",  icon=folium.Icon(color="green")).add_to(
 mapa.fit_bounds(coords)
 mapa.save("rota.html")
 webbrowser.open("file://" + os.path.abspath("rota.html"))
+
 
 # 4) Imagem
 print("4/4 Gerando imagem...")
